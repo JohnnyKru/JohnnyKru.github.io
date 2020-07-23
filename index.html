@@ -57,16 +57,16 @@
       <h5 style="position: relative ;top:80%; color: red;">$340.00</h5>
        
         <div class="paypalwrap">
-       <div id="paypal-button-container"></div>
+      <div id="paypal-button-container"></div>
 <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
 <script>
   paypal.Buttons({
       style: {
           shape: 'rect',
           color: 'gold',
-          layout: 'vertical',
-          label: 'paypal',
-          
+          layout: 'horizontal',
+          label: 'pay',
+          tagline: true
       },
       createOrder: function(data, actions) {
           return actions.order.create({
@@ -84,10 +84,9 @@
       }
   }).render('#paypal-button-container');
 </script>
-
       </div>  
 
-        
+
       </div>
 
     </div>     
