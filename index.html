@@ -9,29 +9,68 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     
-    <title>Hello, world!</title>
+    <title>Johnny's Payment Portal for Rent <title>
   </head>
+
   <body>
         <ul class="nav justify-content-center navbar-dark bg-dark fixed-top">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Active</a>
+                  <a class="nav-link active" href="#">Service</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="#">Muay Thai PT</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="#">Rent</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
+                  <a class="nav-link disabled" href="#">Fitness Training</a>
                 </li>
               </ul>
+
 <div class="jumbotron jumbotron-fluid">
     <div class="title">
         <h1>Johnny Kru Keokongsy</h1>
         <hr class="my-4">
-        <p>Web Devloper / Sales Rep looking to connect with start up scoooi.</p>
+        <p>Johnny's Payment Portal</p>
     </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+  <section>
+  <div id="paypal-button-container"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'white',
+          layout: 'vertical',
+          label: 'pay',
+          
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: ''
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container');
+</script>     
+</section>
+</div>
+</div>
+</div>
+
 </div>
 
 <!--Personal Area-->
@@ -44,19 +83,19 @@
 
   <div class="container">
     <div class="row">
-    <div class="photo col-md-2"><img src="#"></div>
-      <p class="col-md-5 tex1">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.</p>
-      <p class="col-md-5 tex2">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato. Fu reso popolare, negli anni ’60, con la diffusione dei fogli di caratteri trasferibili “Letraset”, che contenevano passaggi del Lorem Ipsum, e più recentemente da software di impaginazione come Aldus PageMaker, che includeva versioni del Lorem Ipsum.</p>
-    </div>     
+    <div class="photo col-md-6"><img src="#"></div>
+      <p class="col-md-12 tex1">You can Pay Johnny Keokongsy Here.</p>
+      <p class="col-md-12 tex2">Set payment using Pay Pal. </p>
+      <br>
+    </div>
   </div> 
 </section>
-
-
 <!--Area of Business-->
 <section class="ServWrap">
+
 </section>
 <div class="Pro_info">
-    <h1>Profesionl area!</h1>
+    <h1>Credit Card or Bank Card.</h1>
          <p></p>
 </div>
 
