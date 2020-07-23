@@ -35,7 +35,6 @@ p{
 }
 .wrapper1{
 	position: relative;
-	top:100px;
 	width: 800px;
 	height: auto;
 	background:grey;
@@ -50,13 +49,13 @@ p{
 
 }
 
-.paypal-button-container{
+#container2 {
 	border: 1px black;
 	width: 500px;
 	height: 400px;
-	position: center;
-	top:10%;
-	left: 50%
-	background-color: yellow;
+	position: absolute;
+	top:60%;
+	left: 90%;
+	background: yellow;
 
 }
